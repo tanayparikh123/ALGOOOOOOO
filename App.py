@@ -8,7 +8,8 @@ from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 # Load the dataset
-df = pd.read_csv('https://github.com/tanayparikh123/ALGOOOOOOO/blob/main/train.csv')
+df = pd.read_csv('https://github.com/tanayparikh123/ALGOOOOOOO/blob/main/train.csv', skiprows=1)  # Assuming the header is in the first row
+
 
 # Extract time-related features from the datetime column
 df['datetime'] = pd.to_datetime(df['datetime'])
